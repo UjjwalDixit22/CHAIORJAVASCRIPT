@@ -24,7 +24,51 @@
 // "" => false
 
 
-let someNumber = 45;
-let stringNumber = String(someNumber);
-console.log(stringNumber); // "45"
-console.log(typeof stringNumber); // string
+// let someNumber = 45;
+// let stringNumber = String(someNumber);
+// console.log(stringNumber); // "45"
+// console.log(typeof stringNumber); // string
+
+
+
+//*****************************OPERATIONS*********************************
+
+// let value = 8;
+// let negValue = -value;
+// console.log(negValue);
+
+// console.log(2+2);
+// console.log(2-2);
+// console.log(2*2);
+// console.log(2/2);
+// console.log(2**3);
+// console.log(5%2); 
+
+
+let str1 = "Ujjwal";
+let str2 = " Dixit";
+let fullName = str1 + str2;
+console.log(fullName); // "Ujjwal Dixit"
+
+
+console.log("1"+2);
+console.log(1+"2");
+console.log("1"+2+2);
+console.log(1+2+"2");
+
+// let num = "";
+// console.log(+num);
+
+// Prefix and postfix increment and decrement
+let x = 3;
+const y = x++;
+
+console.log(`x:${x}, y:${y}`);
+// Expected output: "x:4, y:3"
+
+let a = 3;
+const b = ++a;
+
+console.log(`a:${a}, b:${b}`);
+// Expected output: "a:4, b:4"
+
