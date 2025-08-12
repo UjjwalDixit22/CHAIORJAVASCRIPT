@@ -25,3 +25,30 @@ const myFunction = function(){
 } 
 
 console.log(typeof myFunction);
+
+
+
+
+// Stack and Heap Memory
+// Stack Memory: Stores primitive data types (string, number, boolean, null, undefined, BigInt, Symbol) and references to objects.
+// Heap Memory: Stores non-primitive data types (objects, arrays, functions) and their references.
+// When you create a variable, it is stored in stack memory. If the variable is a primitive type, its value is stored directly in the stack.
+// If the variable is a non-primitive type, a reference to the object is stored in the stack, while the actual object is stored in heap memory.
+// When you assign a non-primitive type variable to another variable, you are copying the reference, not the actual object. This means that changes made to the object through one variable will affect the other variable as well, since both point to the same object in heap memory.
+
+
+let youtubeName = "ujjwaldotcom";
+let anotherYoutubeName = youtubeName; // Copying the value
+anotherYoutubeName = "ujjwal22dotcom";
+console.log(anotherYoutubeName); // "ujjwaldotcom"
+console.log(youtubeName); // "ujjwaldotcom"
+
+
+let userOne ={
+    email: "user@goggle.com",
+    upiId: "user@upi",
+}
+let userTwo = userOne; // Copying the reference
+userTwo.email = "vansh@goggle.com";
+console.log(userOne.email); // "
+console.log(userTwo.email); // "
