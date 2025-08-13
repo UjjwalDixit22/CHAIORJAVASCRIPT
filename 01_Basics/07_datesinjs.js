@@ -32,7 +32,7 @@ let newwDate = new Date();
 // console.log(newwDate.getMilliseconds()); // Returns the milliseconds (0-999)
 // console.log(newwDate.getDay()); // Returns the day of the week (0-6, where 0 is Sunday)
 // console.log(newwDate.getTime()); // Returns the number of milliseconds since January 1, 1970, 00:00:00 UTC
-
+ 
 console.log(newwDate.toLocaleString('default',{
     weekdays: 'narrow',
     timeZone: 'Asia/Kolkata',
