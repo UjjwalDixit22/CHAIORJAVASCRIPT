@@ -12,4 +12,4 @@ accountCity = "Mumbai";
 // console.log(accountId);
  /* prefer not to use var because of block scope and functional scope issue*/ 
  let accountState;  // undefined
-console.table([accountEmail, accountId, accountPassword, accountCity, accountState]); 
+console.table([accountEmail, accountId, accountPassword, accountCity, accountState]);    
