@@ -58,4 +58,4 @@ console.log(add(5));//this statement can be written above before declartion and 
 const addtwo = function(num){
     return num+2;
 }
-console.log(addtwo(6));
+console.log(addtwo(6));  
