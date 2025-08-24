@@ -53,7 +53,7 @@ if (true){
 function add(num){
     return num+1;
 }
-console.log(add(5));//this statement can be written above before declartion and it will print the ans but the addtwo one cannot be written above for that we have to learn hoisting concept.
+console.log(add(5));//this statement can be written above before declartion and it will print the ans but the addtwo one cannot be written above for that we have to learn hoisting concept
 // both are functions but the second one is called as Expression as in javascripts variables can hold functions also
 const addtwo = function(num){
     return num+2;
