@@ -39,3 +39,4 @@ const shoppingCart = [
 
 const totalCost = shoppingCart.reduce((acc,item) => acc+item.price,0)
 console.log(`Total cost: $${totalCost}`);
+

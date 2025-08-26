@@ -7,6 +7,3 @@
 ((name)=>{ //unnamed iife with parameter
     console.log(`This is IIFE 2! ${name}`);
 })('Ujjwal Dixit');
-
- 
-
