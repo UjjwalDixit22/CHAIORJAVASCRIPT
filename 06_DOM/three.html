@@ -12,17 +12,47 @@
 
  </body>
  <script>
-const div = document.createElement('div');
-console.log(div);
-div.className="main";
-div.id="myId";
-// custom atttributes
-div.setAttribute("title","genratedTitle")//<div class="main" id="myId" title="genratedTitle"></div>
-div.style.backgroundColor="green"
-div.style.padding="15px"
-div.innerText="HEY"  //anotherwayofaddingtext
-// const addText = document.createTextNode("HEY");
-// div.appendChild(addText);
-document.body.appendChild(div)
+// const div = document.createElement('div');
+// console.log(div);
+// div.className="main";
+// div.id="myId";
+// // custom atttributes
+// div.setAttribute("title","genratedTitle")//<div class="main" id="myId" title="genratedTitle"></div>
+// div.style.backgroundColor="green"
+// div.style.padding="15px"
+// div.innerText="HEY"  //anotherwayofaddingtext
+// // const addText = document.createTextNode("HEY");
+// // div.appendChild(addText);
+// document.body.appendChild(div)
+
+function createDiv(text, color) {
+  const div = document.createElement('div');
+  div.className = "main";
+  div.id = "myId-" + text; // unique id
+  div.setAttribute("title", "generatedTitle-" + text);
+
+  // style
+  div.style.backgroundColor = color;
+  div.style.padding = "15px";
+  div.style.margin = "10px";
+  div.style.color = "white";  // text visible on dark colors
+  div.style.fontWeight = "bold";
+  div.style.textAlign = "center";
+
+  // text
+  div.innerText = text;
+
+  // add to body
+  document.body.appendChild(div);
+}
+
+// Example usage with loop
+const texts = ["Hello", "Welcome", "JavaScript", "Div Creation", "Dynamic!"];
+const colors = ["green", "blue", "purple", "orange", "teal"];
+
+for (let i = 0; i < texts.length; i++) {
+  createDiv(texts[i], colors[i]);
+}
+
  </script>
  </html>
