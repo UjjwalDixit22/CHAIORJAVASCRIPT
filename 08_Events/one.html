@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML EVENTS</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // Events run sequentially in JS there are some exceptions
+// we will not use onclick as event handler instead we will use addEventListener as it provides more programming flexibility and propogation control
+// document.getElementById("owl").addEventListener("click", function(){
+//     alert("Owl clicked");
+// }); 
+
+// event object
+// document.getElementById("owl").addEventListener("click", function(e){
+//     console.log(e); 
+//     console.log(e.target);
+    // type,timestamps,defaultPrevented,target,toElement, srcElement,currentTarget altkey,ctrlKey,shiftKey,key,code
+// },false); 
+
+// Event Propogation -> Event bubbling and Event Capturing
+// Event bubbling -> when an event occurs on an element it first runs the handlers on it then on its parent then all the way up on other ancestors
+// Event capturing -> when an event occurs on an element it first runs the handlers on its ancestors then on its parent then all the way down to the element
+// By default event bubbling is used in JS but we can change it by passing third parameter as true in addEventListener method
+// In the above example if we click on owl image first the event handler of owl image will be executed then its parent ul then div then body then document
+// If we pass true as third parameter in addEventListener method then first the event handler of document will be executed then body then div then ul then owl image
+// We can stop event propogation by using stopPropagation method of event object
+
+// document.getElementById('images').addEventListener('click', function(e){
+//     console.log("Clicked inside  the ul element");
+    
+// },false);//bubbling
+
+// document.getElementById('owl').addEventListener('click', function(e){
+//     console.log("Owl clicked");
+// },false);//bubbling
+
+// down to up
+
+// up to down
+document.getElementById('images').addEventListener('click', function(e){
+    console.log("Clicked inside  the ul element");
+    
+},true);//capturing
+
+document.getElementById('owl').addEventListener('click', function(e){
+    console.log("Owl clicked");
+},true);//capturing
+
+
+
+
+
+
+
+</script>
+</html>
