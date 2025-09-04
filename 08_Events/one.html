@@ -48,25 +48,48 @@
 
 // document.getElementById('owl').addEventListener('click', function(e){
 //     console.log("Owl clicked");
+//     e.stopPropagation();//stops the event propogation same as preventDefault for default behaviour
 // },false);//bubbling
 
 // down to up
 
-// up to down
-document.getElementById('images').addEventListener('click', function(e){
-    console.log("Clicked inside  the ul element");
+// // up to down
+// document.getElementById('images').addEventListener('click', function(e){
+//     console.log("Clicked inside  the ul element");
     
-},true);//capturing
+// },true);//capturing
 
-document.getElementById('owl').addEventListener('click', function(e){
-    console.log("Owl clicked");
-},true);//capturing
+// document.getElementById('owl').addEventListener('click', function(e){
+//     console.log("Owl clicked");
+// },true);//capturing
 
+ 
+// Preventing default behaviour
 
+// document.getElementById('google').addEventListener('click',function(e){
+//     e.preventDefault();//prevents the default behaviour of the elemen
+//     e.stopPropagation(); //now it will only run this event handler
+//     console.log("Default behaviour prevented");
+// })
 
+// Activity -> When we click on any image they all disaapear
 
+document.querySelector('#images').addEventListener('click',function(e){
+    // console.log(e.target);
+    // console.log(e.target.parentNode); //li element
+console.log(e.target.tagName);  //img,li
 
+if(e.target.tagName === 'IMG'){//if we click on ul or li nothing will happen
 
+    console.log(e.target.id);  
+    
+    let removeIt = e.target.parentNode;
+    removeIt.remove();
+}
+    // removeIt.parentNode.removeChild(removeIt);//li-ul-removechild-removeIT
+})
 
 </script>
 </html>
+
+<!-- Async Api ->. setTimeOut , setInterval,etc -->

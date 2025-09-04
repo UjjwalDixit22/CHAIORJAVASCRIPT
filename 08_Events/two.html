@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading1">Hey There Learning JAvaScript Async OPerations</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    // SetTimeout
+    // setTimeout(function(){
+    //     console.log("2 seconds have passed")
+    // },2000)
+
+    const sayUjjwal = function(){
+        console.log("Ujjwal Dixit");
+    }
+    const changeText = function(){
+        document.querySelector('#heading1').innerHTML= "Through Best JS course";
+    }
+    // setTimeout(sayUjjwal,3000) 
+    // setTimeout(changeText,3000) 
+   const changeMe =  setTimeout(changeText,3000) 
+
+    // How to stop the setTimeout -> clearTimeout
+    //  clearTimeout(changeMe)//you have to take reference of setTimeout 
+    // No benifit instead apply it on an event listener
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe)
+        console.log("Timeout has been cleared");
+        
+    })
+
+    // SetInterval
+    // let count = 0;
+    // let interval = setInterval(function(){
+    //     count++;
+    //     console.log(count + " seconds have passed")
+    // },1000)
+
+
+</script>
+</html>
