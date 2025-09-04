@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+        body{
+           background-color: #414141;
+        }
+        button{
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            color: tomato;
+            background-color: black;
+        }   
+    </style>
+</head>
+<body>
+    <h1 id="heading1">Learning JAvaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+// setInterval
+// setInterval(function(){
+//     console.log("Ujjwal Dixit");  
+    
+// },2000)
+
+// const sayDate = function(str){
+//     console.log(str,Date.now());
+// }
+// const interValId = setInterval(sayDate,2000,"The time is: ")
+// clearInterval(interValId)
+
+// Activity do it with buttons
+document.querySelector('#start').addEventListener('click',function(){
+    // setInterval(function(){
+    //     console.log("The time is",Date.now());
+    // },2000);
+const sayDate = function(str){
+    console.log(str,Date.now());
+}
+const interValId = setInterval(sayDate,2000,"The time is: ")
+document.querySelector('#stop').addEventListener('click',function(){
+    clearInterval(interValId)
+    console.log("Interval has been cleared");
+})
+})
+</script>
+</html>
